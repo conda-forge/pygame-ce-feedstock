@@ -9,7 +9,7 @@ source:
   - url: https://pypi.org/packages/source/p/pygame-ce/pygame_ce-${{ version }}.tar.gz
     sha256: 86beb797cd73c141299a29b56f7df2b0543fbdc81d428022458329ff694aaa51
     patches:
-    - meson-search-conda-prefix.patch
+      - patches/meson-search-conda-prefix.patch
 
 build:
   script: ${{ PYTHON }} -m pip install .
@@ -48,7 +48,7 @@ requirements:
 tests:
   - python:
       imports:
-      - pygame
+        - pygame
       pip_check: true
 
 about:
