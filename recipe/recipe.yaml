@@ -13,7 +13,7 @@ source:
 
 build:
   script: ${{ PYTHON }} -m pip install .
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -38,7 +38,7 @@ requirements:
     - sdl2_image
     - sdl2_ttf
     - libfreetype
-    - if: linux 
+    - if: linux
       then: xorg-xorgproto
   run:
     - python
